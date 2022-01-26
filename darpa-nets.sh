@@ -37,19 +37,26 @@ arpa_tools:
     - host
     - whois
   topography:
+    - arping
     - ping
     - route
     - traceroute 
     - netstat
-    - tcpdump
+    - nicstat
     - nmap
   live_connections:
+    - tcpdump
     - socat
     - nc
     - ssh
     - telnet
+    - iperf
+    - netperf
 
 misc_helpers:
+  syslog:
+    - logger -t LABEL MSG
+    - journalctl -f -t LABEL
   daters:
     - curl
     - batcat (bat)
